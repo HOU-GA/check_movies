@@ -1,0 +1,69 @@
+.movie-card {
+    width: 18rem;
+    margin: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px !important;
+    overflow: hidden;
+    height: 100%; /* Pour égaliser la hauteur */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-container {
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .movie-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .card-body-custom {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pour égaliser la hauteur */
+  }
+  
+  .card-title-custom {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .card-text-custom {
+    color: #666;
+    flex-grow: 1; /* Pour pousser le bouton vers le bas */
+    margin-bottom: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes avant truncate */
+    -webkit-box-orient: vertical;
+  }
+  
+  .btn-custom {
+    align-self: flex-start;
+    background-color: #0062cc;
+    border: none;
+    margin-top: auto; /* Pour pousser le bouton vers le bas */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0050a0;
+  }

@@ -1,0 +1,40 @@
+.movies {
+    display: flex;
+    justify-content: center; /* Centre au lieu de space-between pour mieux gérer l'espace */
+    flex-wrap: wrap;
+    gap: 30px; /* Espacement moderne entre les cartes */
+    padding: 2%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Effet de chargement progressif pour les cartes */
+.movie-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.movie-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movies {
+        gap: 20px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .movies {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+}

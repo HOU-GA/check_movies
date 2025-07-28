@@ -46,7 +46,7 @@ export const moviesData = [
       description:
         "In 1862, Amsterdam Vallon returns to the Five Points area of New York City seeking revenge against Bill the Butcher, his father's killer.",
       posterUrl:
-        "https://img7.cdn.cinoche.com/images/14aa038469eaf2ca96dbc3da4182428c.jpg",
+        "https://i.scdn.co/image/ab67616d0000b273678ed6c02f3959dca26393f8",
       trailer: "https://www.youtube.com/embed/qHVUPri5tjA",
     },
     {
