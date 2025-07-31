@@ -14,6 +14,9 @@ function App() {
   //use state du filter par titre
   const [researchTitle, setResearchTitle] = useState("")
 
+  //use state pour filtre le tableau par note
+  const [searchrate, setSearchRate] = useState(1)
+
   //fonction add elle rajout un nouveau film a la fin du tableau
   const add = (newMovie) => {
     setMovies([...movies, newMovie])
@@ -29,7 +32,7 @@ function App() {
     <FilterTitle researchTitle={researchTitle} setResearchTitle={setResearchTitle}/>
 
     {/*******Filter Rate************/}
-    <FilterByRating/>
+    <FilterByRating searchrate={searchrate} setSearchRate={setSearchRate} isRating={false}/>
 
 
    {/*lappel du composant qui va add Movie*/} 
@@ -37,7 +40,7 @@ function App() {
 
 
    {/*lappel du composant moviesList: mapping (parcourir le tableau un  a un*/} 
-    <MoviesList movies={movies} researchTitle={researchTitle}/>
+    <MoviesList movies={movies} researchTitle={researchTitle} searchrate={searchrate}/>
   </div>
 
   );

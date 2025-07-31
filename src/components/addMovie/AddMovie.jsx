@@ -97,9 +97,34 @@ const handleAddMovie = () => {
         <Form.Control type="text" placeholder="Description..." value={description} onChange={(e)=>setDescription(e.target.value)}/>
       </Form.Group>
 
-      <Form.Group className="mb-3" > 
-        <Form.Control type="number" placeholder="1---->5" value={rate} onChange={(e)=>setRate(e.target.value)} />
+      {/******
+        
+        <Form.Group className="mb-3" > 
+        <Form.Control 
+        type="text" 
+        placeholder="1---->5" 
+        value={rate} 
+        maxLength={1}
+        onChange={(e)=>setRate(e.target.value)} />
+        
       </Form.Group>
+       
+       */}
+      <Form.Group className="mb-3">
+       <Form.Control 
+        type="text" 
+        placeholder="1---->5" 
+        value={rate} 
+        maxLength={1}
+        onChange={(e) => {
+        const value = e.target.value;
+          // Condition : seulement 1, 2, 3, 4 ou 5
+        if (value >= "1" && value <= "5") {
+        setRate(value);
+      }
+    }} 
+  />
+</Form.Group>
 
       <Form.Group className="mb-3" > 
         <Form.Control type="text" placeholder="l'URL" value={posterUrl} onChange={(e)=>setPosterUrl(e.target.value)}/>

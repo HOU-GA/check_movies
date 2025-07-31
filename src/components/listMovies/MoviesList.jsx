@@ -21,7 +21,7 @@ import React, { useState, useEffect } from 'react';
 import './moviesList.css';
 import CardMovie from '../cardMovies/CardMovie';
 
-const MoviesList = ({ movies, researchTitle }) => {
+const MoviesList = ({ movies, researchTitle, searchrate }) => {
     const [loadedMovies, setLoadedMovies] = useState([]);
 
     useEffect(() => {
@@ -36,7 +36,10 @@ const MoviesList = ({ movies, researchTitle }) => {
     return (
         <div className='movies'>
             {loadedMovies
-            .filter((film)=>film.title.toUpperCase().includes(researchTitle.toUpperCase()))
+            .filter((film)=>film.title.toUpperCase().includes(researchTitle.toUpperCase())
+        && film.rate === searchrate
+        
+        )
             .map((film) => (
                 <div 
                     className="movie-item" 

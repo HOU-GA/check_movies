@@ -27,7 +27,7 @@ export default CardMovie
 import React from 'react'
 import './cardMovie.css'
 import { Button, Card } from 'react-bootstrap';
-
+import Rate from '../filterRate/FilterRate'
 const CardMovie = ({ movie }) => {
   return (
     <div className='movie'>
@@ -37,6 +37,7 @@ const CardMovie = ({ movie }) => {
         </div>
         <Card.Body className="card-body-custom">
           <Card.Title className="card-title-custom">{movie.title}</Card.Title>
+          <Rate isRating={true} rate={movie.rate}/>
           <Card.Text className="card-text-custom">
             {movie.description}
           </Card.Text>
